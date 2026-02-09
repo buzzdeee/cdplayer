@@ -137,8 +137,8 @@ static FreeDBView *singleInstance = nil;
 	cddb = [cddbClass new];
    
 	[siteList removeAllObjects];
-	// Always get list from main site (www.freedb.org).
-	[cddb setDefaultSite: @"http://freedb.freedb.org:80/~cddb/cddb.cgi"];
+	// Always get list from main site (gnudb.org).
+	[cddb setDefaultSite: @"https://gnudb.gnudb.org/~cddb/cddb.cgi"];
 
 	if([cddb connect]) {
 		siteArray = [cddb sites];
@@ -147,7 +147,7 @@ static FreeDBView *singleInstance = nil;
   
 	if (siteArray == nil) {
 		NSRunAlertPanel(_(@"Can't get list from internet"),
-                    _(@"Can't get the list of public freedb sites.\nMake sure you have internet connection and the connection to the official freedb site (www.freedb.org) works."),
+                    _(@"Can't get the list of public gnudb sites.\nMake sure you have internet connection and the connection to the official gnudb site (gnudb.org) works."),
                     _(@"OK"),
                     nil,
                     nil);
